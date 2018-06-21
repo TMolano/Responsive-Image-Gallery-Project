@@ -20,7 +20,7 @@ const api_endpoint = 'https://api.unsplash.com/photos/';
             let newContent = '';
             for(let i = 0; i < resultsJSON.length; i++)
             {
-                newContent += '<li class="photos"><article>'+ '<img src="' + resultsJSON[i].urls.small + 'alt=image of comic art">';
+                newContent += '<li class="photos"><article>'+ '<img src="' + resultsJSON[i].urls.regular + 'alt=image description">';
                 newContent += '<div id="hover"><p id="user">' + resultsJSON[i].user.name + '</p>';
                 newContent += '<p id="likes">' + resultsJSON[i].likes + '</p></div></article></li>';
             }
@@ -33,3 +33,16 @@ const api_endpoint = 'https://api.unsplash.com/photos/';
         .catch( error => {
             console.log('An Error Occurred:', error)
         });
+
+
+const globe = document.getElementById("logo");
+
+globe.addEventListener("click", function () {
+
+    if(globe.className === "spin"){
+        globe.classList.remove("spin");
+    }
+else
+    globe.classList.add("spin");
+
+});

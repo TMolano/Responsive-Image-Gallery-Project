@@ -115,8 +115,7 @@ header {
   background:url("/resources/image-gallery-assets/globe.svg")no-repeat center;
   margin: 0;
   height: 5rem;
-
-  animation: globe 25s linear infinite;
+  cursor: pointer;
 
   @include mx(mobile){
     background-size: 2rem;
@@ -130,6 +129,10 @@ header {
     background-size: 4.5rem;
 
   }
+}
+
+.spin {
+  animation: globe 25s linear infinite;
 }
 
 #user {

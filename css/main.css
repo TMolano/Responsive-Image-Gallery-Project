@@ -74,7 +74,7 @@ a {
   background: url("/resources/image-gallery-assets/globe.svg") no-repeat center;
   margin: 0;
   height: 5rem;
-  animation: globe 25s linear infinite; }
+  cursor: pointer; }
   @media (min-width: 320px) {
     #logo {
       background-size: 2rem; } }
@@ -84,6 +84,9 @@ a {
   @media (min-width: 1000px) {
     #logo {
       background-size: 4.5rem; } }
+
+.spin {
+  animation: globe 25s linear infinite; }
 
 #user {
   background: url("/resources/image-gallery-assets/user-icon.svg") no-repeat left;

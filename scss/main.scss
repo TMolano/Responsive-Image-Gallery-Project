@@ -103,12 +103,8 @@ a{
 
 }
 
-header {
-
-}
-
 #logo {
-  background:url("/resources/image-gallery-assets/globe.svg")no-repeat center;
+  background:url("../resources/image-gallery-assets/globe.svg")no-repeat center;
   margin: 0;
   height: 5rem;
   cursor: pointer;
@@ -132,7 +128,7 @@ header {
 }
 
 #user {
-  background: url("/resources/image-gallery-assets/user-icon.svg") no-repeat left;
+  background: url("../resources/image-gallery-assets/user-icon.svg") no-repeat left;
   background-size: 1rem;
   text-align: left;
   padding-left: 1.5rem;
@@ -140,7 +136,7 @@ header {
 }
 
 #likes {
-  background: url("/resources/image-gallery-assets/heart.svg") no-repeat left;
+  background: url("../resources/image-gallery-assets/heart.svg") no-repeat left;
   background-size: 1rem;
   text-align: left;
   padding-left: 1.5rem;

@@ -16,8 +16,8 @@ fetch(url)
         for(let i = 0; i < resultsJSON.length; i++)
         {
             newContent += '<li class="photos"><article>'+ '<img  src="' + resultsJSON[i].urls.small + '" ' +
-                'srcset="' + resultsJSON[i].urls.small + ' 400w, https://www.tcgplayer.com/Content/images/tcgplayer-logo-color_320x120.png 800w" ' +
-                'sizes="(max-width:300px) 100vw, (max-width:1000px) 10vw"/>';
+                'srcset="' + resultsJSON[i].urls.small + ' 400w, ' + resultsJSON[i].urls.regular + ' 1080w, ' + '" ' +
+                'sizes="(min-width:320px) 100vw, (min-width:1000px) 100vw"/>';
             newContent += '<div id="hover"><p id="user">' + resultsJSON[i].user.name + '</p>';
             newContent += '<p id="likes">' + resultsJSON[i].likes + '</p></div></article></li>';
         }

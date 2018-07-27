@@ -1,0 +1,111 @@
+@keyframes globe {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+#photoGallery{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+
+}
+
+.photos {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  height: 12rem;
+
+  img {
+    width: 15rem;
+    height: 12rem;
+  }
+
+  @include mx(mobile) {
+    background: white;
+    height: auto;
+  }
+  @include mx(pc) {
+    background: none;
+    height: 12rem;
+  }
+
+  #hover {
+    height: 4.8rem;
+    padding: .1rem;
+
+    @include mx(pc) {
+      transition: .5s ease-out;
+      position: relative;
+      top: -5.20rem;
+    }
+  }
+
+  p {
+    @include mx(mobile){
+      visibility: visible;
+    }
+    @include mx(pc){
+      visibility: hidden;
+    }
+    margin: 1rem;
+    font-size: 0.8rem;
+    width: fit-content;
+  }
+
+  &:hover {
+    #hover {
+
+      transition: .5s ease-in;
+      background: rgba(255, 255, 255, .85);
+
+      p{
+        transition: .5s ease-in;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+#logo {
+  display: block;
+  background:url("../resources/image-gallery-assets/globe.svg")no-repeat center;
+  margin: 0;
+  height: 5rem;
+  cursor: pointer;
+
+  @include mx(mobile){
+    background-size: 2rem;
+
+  }
+  @include mx(medium){
+    background-size: 3rem;
+
+  }
+  @include mx(pc){
+    background-size: 4.5rem;
+
+  }
+}
+
+.spin {
+  animation: globe 25s linear infinite;
+}
+
+#user {
+  background: url("../resources/image-gallery-assets/user-icon.svg") no-repeat left;
+  background-size: 1rem;
+  text-align: left;
+  padding-left: 1.5rem;
+
+}
+
+#likes {
+  background: url("../resources/image-gallery-assets/heart.svg") no-repeat left;
+  background-size: 1rem;
+  text-align: left;
+  padding-left: 1.5rem;
+}
